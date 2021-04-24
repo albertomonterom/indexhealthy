@@ -1,15 +1,25 @@
+/* PÁGINA ENTERA */
+:root{
+    --blanquito: #e8e8e7;
+    --oscuro: #333333;
+    --rojito: #b91817;
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --twitter: #55acee;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background: #333333;
-    color: #e8e8e7;
-    font-family: sans-serif;
+.index body{
+    background: var(--oscuro);
 }
+
 .contenedor{
-    background: #333333;
+    background: var(--oscuro);
+    color: var(--blanquito);
+    font-family: WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
     width: 100%;
     max-width: 1366px;
     margin: auto;
@@ -18,6 +28,143 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
 } 
+/* HEADER */
+header{
+    background: rgb(31, 30, 30);
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header .logo{
+    color: var(--blanquito);
+    font-size: 30px;
+
+}
+header .logo img{
+    width: 100px;
+    vertical-align: top;
+}
+header .logo a{
+    color: var(--rojito);
+    text-decoration: none;
+    line-height: 100px;
+    font-family: WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-style: bold;
+}
+header nav{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header nav a{
+    background: rgb(31, 30, 30);
+    color: var(--blanquito);
+    text-align: center;
+    text-decoration: none;
+    padding: 9px;
+    flex-grow: 1;
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+.navegacion ul{
+    list-style: none;
+}
+.menu{
+    display: flex;
+    float:left;
+    text-align: center;
+    justify-content: flex-end;
+}
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+.menu li a:hover{
+    background: var(--blanquito);
+    color: rgb(31, 30, 30);
+}
+/*SUBMENUS HEADER*/
+.submenu{
+    position: absolute;
+    background: rgb(31, 30, 30);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.submenu li a{
+    display: block;
+    padding:15px;
+    color: var(--blanquito);
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    align-items: center;
+    text-decoration: none;
+}
+/*INICIAR SESIÓN TEXTO HEADER*/
+.menu1{
+    display: flex;
+    justify-content: center; 
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+.menu1 li{
+    margin-right: 100px;
+}
+.menu1 a{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color: var(--blanquito);
+    font-size: 20px;
+}
+.menu1 a span{
+    transition: transform 0.2s ease-out;
+}
+.menu1 i{
+    font-size: 30px;
+}
+.menu1 a span:first-child{
+    display: inline-block;
+    padding: 10px;
+}
+.menu1 a span:last-child{
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+}
+.menu1 a:hover span:first-child{
+    transform: translateX(100%);
+}
+.menu1 a:hover span:first-child,
+.menu1[data-animation] a:hover span:last-child{
+    transform: none;
+}
+.menu1[data-animation="to-up"] a span:last-child{
+    transform: translateY(100%)
+}
+.menu1[data-animation="to-up"] a:hover span:first-child{
+    transform: translateY(-100%)
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+/* FORMULARIO */
 .content{
     max-width: 1150px;
     margin-left: 100px;
@@ -26,12 +173,13 @@ body{
 }
 .contact-wrapper{
     box-shadow: 0 0 20px 0 rgba(255,255,255,.3);
+    margin: .62em;
 }
 .contact-wrapper{
     padding: 0;
 }
 .contact-form{
-    background: #333333;
+    background: var(--oscuro);
 }
 .contact-form form p{
     margin: 0;
@@ -51,8 +199,8 @@ body{
     border: none;
     background: none;
     outline: none;
-    color:#e8e8e7;
-    border-bottom: 1px solid #b91817;
+    color:var(--blanquito);
+    border-bottom: 1px solid var(--rojito);
 }
 .contact-form form textarea{
     min-width: 100%;
@@ -64,9 +212,9 @@ body{
     width: 45%;
     padding: 1em;
     border: none;
-    background: #b91817;
+    background: var(--rojito);
     outline: none;
-    color:#e8e8e7;
+    color: var(--blanquito);
     text-transform: uppercase;
 }
 .contact-form form button:hover,
@@ -89,6 +237,84 @@ body{
 }
 .contact-info ul li{
     padding: .5em;
+}
+/* FOOTER */
+footer{
+    background: rgb(31, 30, 30);
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .numerofooter{
+    display: inline-block;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+footer .numerofooter a{
+    display: block;
+    padding: 0 10px;
+    background: var(--oscuro);
+    color: var(--blanquito);
+    line-height: 40px;
+    font-size: 20px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.2);
+    transition: .2s;
+}
+.numerofooter:hover a{
+    filter: blur(2px);
+}
+.numerofooter a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0,0,0,0.4);
+    filter: none;
+}
+.numerofooter .phone:hover{
+    background: var(--blanquito);
+    color: var(--oscuro);
+}
+footer .nombresfooter {
+    background: transparent;
+    color: var(--blanquito);
+    display: flex;
+    flex-wrap: wrap;
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    text-align: justify;
+}
+footer .social li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+footer .social a{
+    display: block;
+    padding: 0 10px;
+    background: var(--oscuro);
+    color: var(--blanquito);
+    line-height: 40px;
+    font-size: 20px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.2);
+    transition: .2s;
+}
+.social ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0,0,0,0.4);
+    filter: none;
+}
+.social ul li .facebook:hover{
+    background: var(--facebook);
+}
+.social ul li .instagram:hover{
+    background: var(--instagram);
+}
+.social ul li .twitter:hover{
+    background: var(--twitter);
 }
 @media screen and (max-width: 800px){
     .contenedor{
