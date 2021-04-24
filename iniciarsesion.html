@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0,minimum-scale=1.0">
-    <script src="prefix.js"></script>
-    <link rel="stylesheet" href="./css/contacto.css">
-    <link rel="stylesheet" href="./css/modal.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/iniciarsesion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="shortcut icon" href="./images/hsicon.png"> 
-    <title>Healthy-Sex</title>
+    <title>Iniciar sesión</title>
 </head>
+<body>
 <body class="contactosss">
     <div class="contenedor">
         <header>
@@ -50,61 +48,24 @@
                 </li>
             </ul>
         </header>
-        <section>
-            <div class="content">
-                <script src="./js/contacto.js"></script>
-                <div class="contact-wrapper">
-                    <div class="contact-form">
-                        <form>
-                            <p>
-                                <label for="nombre">Nombre</label>
-                                <input type="text" onkeypress="return SoloLetras(event);" name="nombre" id="nombre">
-                            </p>
-                            <p>
-                                <label for="email">Correo electrónico</label>
-                                <input type="email" onkeypress="return ValidaCorreo(event);" name="nombre" id="email">
-                            </p>
-                            <p>
-                                <label for="telefono">Teléfono</label>
-                                <input type="tel" onkeypress="return SoloNumeros(event);" name="nombre" id="telefono"
-                                pattern="[0-11]{2}-[0-11]{2}-[0-11]{4}-[0-11]{4}" required>
-                            </p>
-                            <p>
-                                <label for="asunto">Asunto</label>
-                                <input type="text" onkeypress="return SoloLetras(event);" name="asunto" id="asunto">
-                            </p>
-                            <p class="block">
-                                <label for="mensaje">Mensaje</label>
-                                <textarea name="mensaje" onkeypress="return SoloLetrasM(event);" id="mensaje"></textarea>
-                            </p>
-                            <p>
-                                <button class="enviar" onclick="enviar();" type="submit">
-                                    Enviar
-                                </button>
-                            </p>
-                            <p>
-                                <button class="borrar" onclick="borrar();" type="submit">
-                                    Borrar
-                                </button>
-                            </p>
-                        </form>
-                    </div>
-                <div class="contact-info">
-                    <h4>Más información</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Mar Mediterraneo</li>
-                        <li><i class="fas fa-phone"></i> +52 55 3732-5700</li>
-                        <li><i class="fas fa-envelope-open-text"></i> helathysex@gmail.com</li>
-                    </ul>
-                    <p>
-                        Contáctanos para cualquier consulta.<br>
-                        Lun-Sab 8:00-19:00hrs.
-                    </p>
-                    <p>Healthy Sex</p>
+        <form action="" class="formulario">
+            <h1>Inicia Sesión</h1>
+            <div class="contenedor-formulario">
+                <div class="input-contenedor">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" placeholder="Nombre de Usuario">
                 </div>
+                <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button class="registrarse" onclick="enviar();" type="submit">
+                    Log In
+                </button>
+                <p>Al registrate, aceptas nuestras condiciones de uso.</p>
+                <p>¿Aún no tienes cuenta?<a class="link" href="registro.html"> Iniciar sesión</a></p>
             </div>
-        </section>
-
+        </form>
         <footer>
             <section class="numerofooter">
                 <a href="tel:5537325700" class="phone">
