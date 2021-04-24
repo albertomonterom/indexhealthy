@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+.index body{
     background: #e8e8e7;
 }
 .contenedor{
@@ -251,7 +251,7 @@ header nav a{
     color:#333333;
     background: transparent;
 }
-form{
+.formulario form{
     width: 450px;
     margin: auto;
     background: #d1d1d1;
@@ -261,13 +261,13 @@ form{
     border-radius: 7px;
     font-family: sans-serif;
 }
-.titulocontacto{
+.formulario .titulocontacto{
     text-align: center;
     margin: 0;
     font-size: 30px;
     margin-bottom: 20px;
 }
-input, textarea{
+.formulario input, textarea{
     width: 100%;
     margin-bottom: 20px;
     padding: 7px;
@@ -275,7 +275,7 @@ input, textarea{
     font-size: 17px;
     border: none;
 }
-textarea{
+.formulario textarea{
     min-height: 100px;
     max-height: 200px;
     min-width: 100%;
