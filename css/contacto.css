@@ -172,7 +172,8 @@ header nav a{
     padding: .72em;
 }
 .contact-wrapper{
-    box-shadow: 0 0 20px 0 rgba(255,255,255,.3);
+    /* box-shadow: 0 0 20px 0 rgba(255,255,255,.3); */
+    box-shadow: 0 0 20px 0 #fd1532;
     margin: .62em;
 }
 .contact-wrapper{
