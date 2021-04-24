@@ -1,13 +1,23 @@
+/* PÁGINA ENTERA */
+:root{
+    --blanquito: #e8e8e7;
+    --oscuro: #333333;
+    --rojito: #b91817;
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --twitter: #55acee;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 .index body{
-    background: #e8e8e7;
+    background: var(--blanquito);
 }
+
 .contenedor{
-    background: #e8e8e7;
+    background: var(--blanquito);
     width: 100%;
     max-width: 1366px;
     margin: auto;
@@ -16,6 +26,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 } 
+/* HEADER */
 header{
     background: rgb(31, 30, 30);
     width: 100%;
@@ -28,7 +39,7 @@ header{
     flex-wrap: wrap;
 }
 header .logo{
-    color: #e8e8e7;
+    color: var(--blanquito);
     font-size: 30px;
 
 }
@@ -37,10 +48,10 @@ header .logo img{
     vertical-align: top;
 }
 header .logo a{
-    color: #b91817;
+    color: var(--rojito);
     text-decoration: none;
     line-height: 100px;
-    font-family: Arial;
+    font-family: WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
     font-style: bold;
 }
 header nav{
@@ -50,13 +61,13 @@ header nav{
     align-items: center;
 }
 header nav a{
-    background: #e8e8e7;
-    color: #333333;
+    background: rgb(31, 30, 30);
+    color: var(--blanquito);
     text-align: center;
     text-decoration: none;
     padding: 9px;
     flex-grow: 1;
-    font-family: sans-serif;
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 .navegacion ul{
     list-style: none;
@@ -72,13 +83,13 @@ header nav a{
     display: inline-block;
 }
 .menu li a:hover{
-    background: #333333;
-    color: #e8e8e7;
+    background: var(--blanquito);
+    color: rgb(31, 30, 30);
 }
-/*Submenus*/
+/*SUBMENUS HEADER*/
 .submenu{
     position: absolute;
-    background: #e8e8e7;
+    background: rgb(31, 30, 30);
     width: 100%;
     visibility: hidden;
     opacity: 0;
@@ -87,12 +98,12 @@ header nav a{
 .submenu li a{
     display: block;
     padding:15px;
-    color: #333333;
-    font-family: sans-serif;
+    color: var(--blanquito);
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
     align-items: center;
     text-decoration: none;
 }
-/* Iniciar sesion */
+/*INICIAR SESIÓN TEXTO HEADER*/
 .menu1{
     display: flex;
     justify-content: center; 
@@ -109,8 +120,8 @@ header nav a{
     overflow: hidden;
     color: inherit;
     text-decoration: none;
-    font-family: sans-serif;
-    color:#e8e8e7;
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color: var(--blanquito);
     font-size: 20px;
 }
 .menu1 a span{
@@ -147,7 +158,12 @@ header nav a{
 .menu1[data-animation="to-up"] a:hover span:first-child{
     transform: translateY(-100%)
 }
-/* Fotos slider */
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+/* EMPIEZA BODY */
+/* FOTOS SLIDER*/
 .slider{
     overflow: hidden;
 }
@@ -155,7 +171,6 @@ header nav a{
     display: flex;
     padding: 0;
     width: 300%;
-
     animation: cambio 15s infinite alternate;
     animation-timing-function: ease-in;
 }
@@ -170,19 +185,13 @@ header nav a{
 @keyframes cambio{
     0% { margin-left: 0;}
     33% { margin-left: 0;}
-
     35% { margin-left: -100%;}
     67% { margin-left: -100%;}
-
     70% { margin-left: -200%;}
     100% { margin-left: -200%;}
 }
-.menu li:hover .submenu{
-    visibility: visible;
-    opacity: 1;
-}
 .main{
-    background: #333333;
+    background: var(--oscuro);
     padding: 20px;
     flex: 1 1 100%;
 }
@@ -191,6 +200,7 @@ header nav a{
     padding-bottom: 0;
     border-bottom: none;
 }
+/*BOTON MAS INFO*/
 .button-container{
     display:inline-block;
 }
@@ -202,26 +212,40 @@ header nav a{
     bottom: 270px;
     right: 43%;
     position: absolute;
-    border: 1px solid #333333;
+    border: 1px solid var(--oscuro);
     border-radius: 15px;
     width: 170px;
     height: 50px;
     padding-top: 0px;
     margin: auto;
-    background-color: #333333;
-    color: #e8e8e7;
+    background-color: var(--oscuro);
+    color: var(--blanquito);
     font-size: 20px;
-    font-family: sans-serif;
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 
     transition: .5s;
 }
 .button-container a:hover{
-    border: 1px solid #e8e8e7;
-    background-color: #e8e8e7;
-    color: #333333;
+    border: 1px solid var(--blanquito);
+    background-color: var(--blanquito);
+    color: var(--oscuro);
 }
+/* QUEREMOS MEJORAS TU SS TEXT */
+.primertextindex{
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    top: 500px;
+    right: 35%;
+    text-align: justify;
+    color: var(--oscuro);
+    background: transparent;
+}
+/* CUADRO INFO*/
 .nomain{
-    background: #e8e8e7;
+    background: var(--blanquito);
     padding: 20px;
     flex: 1 1 70%;
 }
@@ -229,7 +253,7 @@ header nav a{
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid transparent;
-    font-family: sans-serif;
+    font-family: WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 .nomain article:nth-last-child(1){
     margin-bottom: 0;
@@ -239,18 +263,7 @@ header nav a{
 .nomain p{
     text-align: justify;
 }
-.primertextindex{
-    font-family: sans-serif;
-    font-weight: bold;
-    display: block;
-    position: absolute;
-    font-size: 20px;
-    top: 500px;
-    right: 35%;
-    text-align: justify;
-    color:#333333;
-    background: transparent;
-}
+/* CUADRO INFO FORM */
 .formulario form{
     width: 450px;
     margin: auto;
@@ -259,7 +272,7 @@ header nav a{
     box-sizing: border-box;
     margin-top: 20px;
     border-radius: 7px;
-    font-family: sans-serif;
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 .formulario .titulocontacto{
     text-align: center;
@@ -282,16 +295,17 @@ header nav a{
     max-width: 100%;
 }
 #botonenviar{
-    background: #333333;
-    color:#e8e8e7;
+    background: var(--oscuro);
+    color:var(--blanquito);
     padding: 20px;
     border-radius: 5px;
 }
 #botonenviar:hover{
     cursor: pointer;
 }
+/* IMAGENES DE LA DERECHA */
 aside{
-    background: #333333;
+    background: var(--oscuro);
     padding: 20px;
     flex: 1 1 30%;
     display: flex;
@@ -300,10 +314,11 @@ aside{
     justify-content: flex-start;
 }
 aside .widget{
-    background: #333333;
+    background: var(--oscuro);
     height: 200px;
     margin: 10px;
 }   
+/* FOOTER */
 footer{
     background: rgb(31, 30, 30);
     width: 100%;
@@ -323,8 +338,8 @@ footer .numerofooter{
 footer .numerofooter a{
     display: block;
     padding: 0 10px;
-    background: #333333;
-    color: #e8e8e7;
+    background: var(--oscuro);
+    color: var(--blanquito);
     line-height: 40px;
     font-size: 20px;
     box-shadow: 0 3px 5px 0px rgba(0,0,0,0.2);
@@ -339,21 +354,16 @@ footer .numerofooter a{
     filter: none;
 }
 .numerofooter .phone:hover{
-    background: #e8e8e7;
-    color: #333333;
+    background: var(--blanquito);
+    color: var(--oscuro);
 }
 footer .nombresfooter {
     background: transparent;
-    color: #e8e8e7;
+    color: var(--blanquito);
     display: flex;
     flex-wrap: wrap;
-    font-family: sans-serif;
+    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
     text-align: justify;
-}
-:root{
-    --facebook: #3b5999;
-    --instagram: #e4405f;
-    --twitter: #55acee;
 }
 footer .social li{
     display: inline-block;
@@ -365,8 +375,8 @@ footer .social li{
 footer .social a{
     display: block;
     padding: 0 10px;
-    background: #333333;
-    color: #e8e8e7;
+    background: var(--oscuro);
+    color: var(--blanquito);
     line-height: 40px;
     font-size: 20px;
     box-shadow: 0 3px 5px 0px rgba(0,0,0,0.2);
@@ -386,6 +396,7 @@ footer .social a{
 .social ul li .twitter:hover{
     background: var(--twitter);
 }
+/* RESPONSIVE */
 @media screen and (max-width: 800px){
     .contenedor{
         flex-direction: column;
