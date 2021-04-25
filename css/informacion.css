@@ -238,10 +238,11 @@ header nav a{
     left: 50%;
     transform: translateX(-50%);
     width: 1200px;
-    background: transparent;
+    background: rgb(31, 30, 30,.7);
     z-index: 8;
     overflow: hidden;
     display: none;
+    border-radius: 10px;
 }
 
 #box-search li a{
