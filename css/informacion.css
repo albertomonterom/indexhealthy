@@ -11,13 +11,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+body{
+    text-align: center;
 }
 .index body{
     background: var(--blanquito);
 }
-
 .contenedor{
-    background: var(--blanquito);
+    background: var(--oscuro);
     width: 100%;
     max-width: 1366px;
     margin: auto;
@@ -30,7 +33,7 @@
 header{
     background: rgb(31, 30, 30);
     width: 100%;
-    padding: 20px;
+    padding: 0px;
 
     display: flex;
     justify-content: space-between;
@@ -41,7 +44,8 @@ header{
 header .logo{
     color: var(--blanquito);
     font-size: 30px;
-
+    padding: 30px;
+    text-align: center;
 }
 header .logo img{
     width: 100px;
@@ -162,162 +166,14 @@ header nav a{
     visibility: visible;
     opacity: 1;
 }
-/* EMPIEZA BODY */
-/* FOTOS SLIDER*/
-.slider{
-    overflow: hidden;
-}
-.slider ul{
-    display: flex;
-    padding: 0;
-    width: 300%;
-    animation: cambio 15s infinite alternate;
-    animation-timing-function: ease-in;
-}
-.slider li{
-    width: 100%;
-    text-align: center;
-    list-style: none;
-}
-.slider img{
-    width: 100%;
-}
-@keyframes cambio{
-    0% { margin-left: 0;}
-    33% { margin-left: 0;}
-    35% { margin-left: -100%;}
-    67% { margin-left: -100%;}
-    70% { margin-left: -200%;}
-    100% { margin-left: -200%;}
-}
-.main{
-    background: var(--oscuro);
-    padding: 20px;
-    flex: 1 1 100%;
-}
-.main article:nth-last-child(1){
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-/*BOTON MAS INFO*/
-.button-container{
-    display:inline-block;
-}
-.button-container a{
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    font-weight: 300;
-    bottom: 270px;
-    right: 43%;
-    position: absolute;
-    border: 1px solid var(--oscuro);
-    border-radius: 15px;
-    width: 170px;
-    height: 50px;
-    padding-top: 0px;
-    margin: auto;
-    background-color: var(--oscuro);
+/* INFORMACION E IMAGENES */
+.textosinformacion h1{
     color: var(--blanquito);
-    font-size: 20px;
-    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-
-    transition: .5s;
 }
-.button-container a:hover{
-    border: 1px solid var(--blanquito);
-    background-color: var(--blanquito);
-    color: var(--oscuro);
+p{
+    color: var(--blanquito);
 }
-/* QUEREMOS MEJORAS TU SS TEXT */
-.primertextindex{
-    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    font-weight: bold;
-    display: block;
-    position: absolute;
-    font-size: 20px;
-    top: 500px;
-    right: 35%;
-    text-align: justify;
-    color: var(--oscuro);
-    background: rgba(255,255,255,.4);
-}
-/* CUADRO INFO*/
-.nomain{
-    background: var(--blanquito);
-    padding: 20px;
-    flex: 1 1 70%;
-}
-.nomain article{
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid transparent;
-    font-family: WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-}
-.nomain article:nth-last-child(1){
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-.nomain p{
-    text-align: justify;
-}
-/* CUADRO INFO FORM */
-.formulario form{
-    width: 450px;
-    margin: auto;
-    background: #d1d1d1;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    border-radius: 7px;
-    font-family:WR_Korean,WR_Japanese,WR_Arabic,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-}
-.formulario .titulocontacto{
-    text-align: center;
-    margin: 0;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-.formulario input, textarea{
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
-    box-sizing: border-box;
-    font-size: 17px;
-    border: none;
-}
-.formulario textarea{
-    min-height: 100px;
-    max-height: 200px;
-    min-width: 100%;
-    max-width: 100%;
-}
-#botonenviar{
-    background: var(--oscuro);
-    color:var(--blanquito);
-    padding: 20px;
-    border-radius: 5px;
-}
-#botonenviar:hover{
-    cursor: pointer;
-}
-/* IMAGENES DE LA DERECHA */
-aside{
-    background: var(--oscuro);
-    padding: 20px;
-    flex: 1 1 30%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-aside .widget{
-    background: var(--oscuro);
-    height: 200px;
-    margin: 10px;
-}   
+/* IMAGENES */
 /* FOOTER */
 footer{
     background: rgb(31, 30, 30);
