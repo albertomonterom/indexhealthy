@@ -325,9 +325,25 @@ aside{
     flex-direction: column;
     justify-content: flex-start;
 }
+aside .widget1{
+    background: rgb(31, 30, 30);
+    height: 425px;
+    margin: 10px;
+    margin-bottom: 80px;
+}
 aside .widget{
-    background: var(--oscuro);
+    background: rgb(31, 30, 30);
     height: 200px;
+    margin: 10px;
+}
+aside .widget2{
+    background: rgb(31, 30, 30);
+    height: 425px;
+    margin: 10px;
+}   
+aside .widget3{
+    background: rgb(31, 30, 30);
+    height: 175px;
     margin: 10px;
 }   
 /* FOOTER */
